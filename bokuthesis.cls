@@ -16,10 +16,13 @@ DIV=12%
 %
 
 \RequirePackage{graphicx}
+\RequirePackage{xcolor}
 \RequirePackage{microtype}
 \RequirePackage{setspace}
 \RequirePackage{libertine}
+\RequirePackage[libertine,cmintegrals,cmbraces,vvarbb]{newtxmath}
 \RequirePackage{hyperref}
+\RequirePackage[ocgcolorlinks]{ocgx2}
 
 %
 % Settings
@@ -27,3 +30,12 @@ DIV=12%
 
 % Line spacing: 1.5 line spacing
 \onehalfspacing
+
+\hypersetup{
+  colorlinks,
+  linkcolor={red!50!black},
+  citecolor={blue!50!black},
+  urlcolor={blue!80!black},
+  pdfauthor={Markus Riedl},
+  pdftitle={Doctoral Thesis}
+}
