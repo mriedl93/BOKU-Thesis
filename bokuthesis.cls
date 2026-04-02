@@ -15,14 +15,14 @@ DIV=12%
 % Packages
 %
 
-\RequirePackage{graphicx}
-\RequirePackage{xcolor}
-\RequirePackage{microtype}
-\RequirePackage{setspace}
-\RequirePackage{libertine}
-\RequirePackage[libertine,cmintegrals,cmbraces,vvarbb]{newtxmath}
-\RequirePackage{hyperref}
-\RequirePackage[ocgcolorlinks]{ocgx2}
+\RequirePackage{graphicx}                     % Pictures/plots/figures
+\RequirePackage{xcolor}                       % ACAB - All Colors Are Beautiful
+\RequirePackage{microtype}                    % Properly formatted font ligatures
+\RequirePackage{setspace}                     % Line spacing
+\RequirePackage{libertine}                    % Pretty font :)
+\RequirePackage[libertine,cmintegrals,cmbraces,vvarbb]{newtxmath} % Math font
+\RequirePackage{hyperref}                     % For links
+\RequirePackage[ocgcolorlinks]{ocgx2}         % For not printing links colored
 
 %
 % Settings
