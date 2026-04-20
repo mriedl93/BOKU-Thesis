@@ -21,6 +21,7 @@ DIV=12%
 \RequirePackage{setspace}                     % Line spacing
 \RequirePackage{libertine}                    % Pretty font :)
 \RequirePackage[libertine,cmintegrals,cmbraces,vvarbb]{newtxmath} % Math font
+\usepackage[scaled=0.8]{FiraMono}             % Pretty Monospaced font
 \RequirePackage{hyperref}                     % For links
 \RequirePackage[ocgcolorlinks]{ocgx2}         % For not printing links colored
 
