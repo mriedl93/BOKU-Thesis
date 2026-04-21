@@ -15,15 +15,29 @@ DIV=12%
 % Packages
 %
 
-\RequirePackage{graphicx}                     % Pictures/plots/figures
-\RequirePackage{xcolor}                       % ACAB - All Colors Are Beautiful
-\RequirePackage{microtype}                    % Properly formatted font ligatures
-\RequirePackage{setspace}                     % Line spacing
-\RequirePackage{libertine}                    % Pretty font :)
+% Essentials
+\RequirePackage{graphicx}                   % Pictures/plots/figures
+\RequirePackage{xcolor}                     % ACAB - All Colors Are Beautiful
+\RequirePackage{setspace}                   % Line spacing
+\RequirePackage{acro}                       % Acronym management
+\RequirePackage{import}                     % Importing LaTeX subfiles
+
+% Fonts
+\RequirePackage{microtype}                  % Properly formatted font ligatures
+\RequirePackage{libertine}                  % Pretty font :)
 \RequirePackage[libertine,cmintegrals,cmbraces,vvarbb]{newtxmath} % Math font
-\usepackage[scaled=0.8]{FiraMono}             % Pretty Monospaced font
-\RequirePackage{hyperref}                     % For links
-\RequirePackage[ocgcolorlinks]{ocgx2}         % For not printing links colored
+\usepackage[scaled=0.8]{FiraMono}           % Pretty Monospaced font
+
+% Languages
+\RequirePackage[ngerman,UKenglish]{babel}
+
+% Bibliography management
+\RequirePackage[style=numeric-comp,sorting=none]{biblatex}
+
+% Links
+\RequirePackage{hyperref}                   % For links
+\RequirePackage[ocgcolorlinks]{ocgx2}       % For not printing links colored
+
 
 %
 % Settings
@@ -32,6 +46,7 @@ DIV=12%
 % Line spacing: 1.5 line spacing
 \onehalfspacing
 
+% Settings for links in PDF
 \hypersetup{
   colorlinks,
   linkcolor={red!50!black},
