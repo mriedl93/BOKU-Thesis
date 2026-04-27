@@ -6,8 +6,9 @@ a4paper,%
 fontsize=11pt,%
 listof=totoc,%
 bibliography=totoc,%
+usegeometry=true,%
 BCOR=12mm,%
-DIV=12%
+DIV=10,%
 ]{scrbook}
 
 
@@ -21,6 +22,7 @@ DIV=12%
 \RequirePackage{setspace}                   % Line spacing
 \RequirePackage{acro}                       % Acronym management
 \RequirePackage{import}                     % Importing LaTeX subfiles
+\RequirePackage{siunitx}                    % Formatting of SI units
 
 % Fonts
 \RequirePackage{microtype}                  % Properly formatted font ligatures
@@ -38,6 +40,14 @@ DIV=12%
 \RequirePackage{hyperref}                   % For links
 \RequirePackage[ocgcolorlinks]{ocgx2}       % For not printing links colored
 
+% Page layout
+\RequirePackage[
+top=30mm,
+bottom=50mm,
+bindingoffset=15mm,
+inner=20mm,
+outer=38mm
+]{geometry}
 
 %
 % Settings
@@ -55,3 +65,5 @@ DIV=12%
   pdfauthor={Markus Riedl},
   pdftitle={Doctoral Thesis}
 }
+
+% \areaset[12mm]{\textwidth}{1.1\textheight}
