@@ -56,6 +56,9 @@ outer=38mm
 % Line spacing: 1.5 line spacing
 \onehalfspacing
 
+% Paragraph spacing
+\setlength{\parskip}{4pt plus 2pt minus 2pt}
+
 % Settings for links in PDF
 \hypersetup{
   colorlinks,
@@ -67,3 +70,6 @@ outer=38mm
 }
 
 % \areaset[12mm]{\textwidth}{1.1\textheight}
+
+% Custom 'SI' unit: base pair
+\DeclareSIUnit{\bp}{bp}
