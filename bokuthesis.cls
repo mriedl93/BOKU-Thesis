@@ -33,6 +33,9 @@ DIV=10,%
 % Languages
 \RequirePackage[ngerman,UKenglish]{babel}
 
+% Include PDFs of papers for cumulative thesis
+\RequirePackage{pdfpages}
+
 % Bibliography management
 \RequirePackage[style=numeric-comp,sorting=none]{biblatex}
 
