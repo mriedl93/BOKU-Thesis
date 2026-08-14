@@ -7,6 +7,8 @@ fontsize=11pt,%
 listof=totoc,%
 bibliography=totoc,%
 usegeometry=true,%
+chapterprefix=true,%
+appendixprefix=true,%
 BCOR=12mm,%
 DIV=10,%
 ]{scrbook}
