@@ -39,7 +39,8 @@ DIV=10,%
 \RequirePackage{pdfpages}
 
 % Bibliography management
-\RequirePackage[style=numeric-comp,sorting=none]{biblatex}
+\RequirePackage[style=BOKU-Thesis/thesis]{biblatex}
+
 
 % Links
 \RequirePackage{hyperref}                   % For links

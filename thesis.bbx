@@ -1,0 +1,36 @@
+% mystyle.bbx
+\ProvidesFile{thesis.bbx}[thesis bbx]
+\RequireBibliographyStyle{numeric-comp}  % start from authoryear
+
+% \ExecuteBibliographyOptions{url=false}
+
+\ExecuteBibliographyOptions{%
+  giveninits=true,
+  minbibnames=3,%
+  maxbibnames=6,%
+  sorting=none,%
+  url=false%
+}
+
+\DeclareFieldFormat{doi}{%
+  \mkbibacro{DOI}\addcolon\space
+  \ifhyperref
+    {\href{https://doi.org/#1}{\nolinkurl{#1}}}
+    {\nolinkurl{#1}}%
+  \nopunct}
+
+
+\renewbibmacro*{doi+eprint+url}{%
+  \iftoggle{bbx:doi}
+    {\printfield{doi}}
+    {}%
+  \newunit\newblock
+  \iftoggle{bbx:eprint}
+    {\usebibmacro{eprint}}
+    {}%
+  \newunit\newblock
+  \iftoggle{bbx:url}
+    {\usebibmacro{url+urldate}}
+    {}}
+%
+% now override specific drivers below
