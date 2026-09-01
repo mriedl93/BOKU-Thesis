@@ -79,3 +79,13 @@ outer=38mm
 
 % Custom 'SI' unit: base pair
 \DeclareSIUnit{\bp}{bp}
+
+\defbibenvironment{poster}
+{\list
+  {}
+  {\setlength{\itemsep}{\bibitemsep}%
+    \setlength{\leftmargin}{0pt}%
+  }%
+}
+{\endlist}
+{\item}

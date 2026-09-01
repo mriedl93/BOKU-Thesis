@@ -19,7 +19,6 @@
     {\nolinkurl{#1}}%
   \nopunct}
 
-
 \renewbibmacro*{doi+eprint+url}{%
   \iftoggle{bbx:doi}
     {\printfield{doi}}
@@ -32,5 +31,45 @@
   \iftoggle{bbx:url}
     {\usebibmacro{url+urldate}}
     {}}
+
+\NewBibliographyString{presentedat}
+\DefineBibliographyStrings{english}{
+  presentedat = presented at \addspace
+}
+\DeclareFieldFormat{eventtitle}{\emph{#1}}
+\renewbibmacro*{event+venue+date}{%
+  \iffieldundef{eventtitle}
+    {}
+    {%
+      \bibstring{presentedat}\printfield{eventtitle}%
+    }%
+  \ifboolexpr{
+    test {\iffieldundef{venue}}
+    and
+    test {\iffieldundef{eventyear}}
+  }
+    {}
+    {\setunit*{\addspace}%
+     \printtext[parens]{%
+       \printfield{venue}%
+       \setunit*{\addcomma\space}%
+       \printeventdate}}%
+  \newunit
+}
 %
 % now override specific drivers below
+
+\DeclareFieldFormat[misc]{title}{\mkbibquote{#1\isdot}}
+
+\DeclareBibliographyDriver{poster}{%
+  \usebibmacro{begentry}%
+  \usebibmacro{author}%
+  \newunit
+  \usebibmacro{title}
+  \newunit\newblock
+  \usebibmacro{event+venue+date}
+  % \printfield{eventtitle}
+  % \printfield{venue}.
+  % \printfield{date}
+  \usebibmacro{finentry}%
+}
