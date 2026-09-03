@@ -80,6 +80,7 @@ outer=38mm
 % Custom 'SI' unit: base pair
 \DeclareSIUnit{\bp}{bp}
 
+% Custom Bibliography for conference contributions
 \defbibenvironment{poster}
 {\list
   {}
@@ -89,3 +90,18 @@ outer=38mm
 }
 {\endlist}
 {\item}
+
+
+
+% Floats (Figures & Tables) and Page content management
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{2}
+% Max fraction of page for floats at top (0.7)
+\renewcommand{\topfraction}{0.7}
+% Max Fraction of page for floats at bottom (0.3)
+\renewcommand{\bottomfraction}{0.3}
+% Min fraction of page for text (0.2)
+\renewcommand{\textfraction}{0.2}
+% Min fraction of floatpage that should have floats (0.5)
+\renewcommand{\floatpagefraction}{0.5}
